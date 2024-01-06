@@ -5,11 +5,12 @@ module.exports = {
     extend: {
       colors: {
         'primary-color': '#fd5342',
+        'card-color': '#eff1f3',
       },
     },
     fontFamily: {
       dosis: ['Dosis', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

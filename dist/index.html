@@ -15,9 +15,36 @@
       href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- fontawesome icon linkup  -->
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-thin.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.5.1/css/sharp-light.css"
+      >
+
   </head>
   <body
-    class="overflow-x--hidden font-dosis flex flex-col min-h-screen select-none"
+    class="overflow-x-hidden font-dosis flex flex-col min-h-screen select-none"
   >
     <!-- header section start  -->
     <header
@@ -29,7 +56,7 @@
             class="flex flex-col md:flex-row gap-2 justify-start items-center"
           >
             <div class="logo max-w-28">
-              <a href="index.html" class="inline-block">
+              <a href="#" class="inline-block">
                 <img
                   class="w-full h-full"
                   src="./assets//images/logo.svg"
@@ -42,35 +69,35 @@
             >
               <li>
                 <a
-                  class="inline-block p-2 hover:bg-white rounded uppercase truncate"
+                  class="inline-block p-2 duration-200 hover:bg-white rounded uppercase truncate"
                   href="#"
                   >MENU</a
                 >
               </li>
               <li>
                 <a
-                  class="inline-block p-2 hover:bg-white rounded uppercase truncate"
+                  class="inline-block p-2 duration-200 hover:bg-white rounded uppercase truncate"
                   href="#"
                   >REWARDS</a
                 >
               </li>
               <li>
                 <a
-                  class="inline-block p-2 hover:bg-white rounded uppercase truncate"
+                  class="inline-block p-2 duration-200 hover:bg-white rounded uppercase truncate"
                   href="#"
                   >LOCATIONS</a
                 >
               </li>
               <li>
                 <a
-                  class="inline-block p-2 hover:bg-white rounded uppercase truncate"
+                  class="inline-block p-2 duration-200 hover:bg-white rounded uppercase truncate"
                   href="#"
                   >GIFT CARDS</a
                 >
               </li>
               <li>
                 <a
-                  class="inline-block p-2 hover:bg-white rounded uppercase truncate"
+                  class="inline-block p-2 duration-200 hover:bg-white rounded uppercase truncate"
                   href="#"
                   >LOG IN</a
                 >
@@ -81,15 +108,16 @@
             <i
               class="fa-solid fa-bag-shopping text-3xl relative cursor-pointer cart"
             >
-              <p
-                class="absolute text-xs w-full h-auto -top-3 -right-3 bg-primary-color text-white block p-1 rounded-md tracking-widest text-center"
+              <span
+                class="absolute text-xs w-full h-auto -top-3 -right-3 bg-primary-color text-white block p-1 rounded-md tracking-widest text-center quantity"
               >
-                5
-              </p>
+                0
+              </span>
             </i>
             <button
-              class="uppercase text-white bg-primary-color font-bold text-lg px-6 py-2 rounded-lg truncate"
+              class="uppercase text-white bg-primary-color font-semibold text-base px-8 py-2 rounded-md truncate"
             >
+            <i class="fa-solid fa-moped mr-2"></i>
               order now
             </button>
           </div>
@@ -100,7 +128,7 @@
 
     <!-- cart section end  -->
     <div
-      class="cart-sidebar duration-300 flex flex-col items-stretch bg-primary-color w-72 min-h-screen fixed top-0 -right-72"
+      class="cart-sidebar duration-300 flex flex-col items-stretch bg-primary-color w-72 fixed top-0 bottom-0 -right-72 overflow-hidden z-50"
     >
       <div
         class="flex justify-between items-center p-2 text-lg font-bold bg-white text-primary-color"
@@ -108,24 +136,81 @@
         <div class="flex gap-2 justify-between items-center">
           <i class="fa-solid fa-bag-shopping"></i>
           <p class="capitalize text-lg tracking-widest">
-            <span class="tracking-normal">10</span>&nbsp;item
+            <span class="tracking-normal quantity">0</span>&nbsp;item
           </p>
         </div>
         <i
           class="close-sidebar fa-solid fa-xmark p-2 border border-primary-color cursor-pointer"
         ></i>
       </div>
-      <ul class="listCart grow"></ul>
-      <div class="checkOut bg-white">
+      <ul
+        class="listCart overflow-y-auto p-3 mb-[44px] grid grid-cols-1 gap-3"
+      ></ul>
+      <div class="checkOut bg-white absolute w-full bottom-0">
         <p class="text-center text-lg font-semibold py-2">
-          Place Order :&nbsp;<span class="total">0</span>
+          Place Order :&nbsp;
+          <span class="text-primary-color">
+            <span class="total">0</span>&nbsp;$
+          </span>
         </p>
       </div>
     </div>
     <!-- cart section end  -->
 
     <!-- food-item section start  -->
-    <div class="grow"></div>
+    <div class="py-12 px-2 grow">
+      <div class="container mx-auto">
+        <div>
+          <div class="text-center">
+            <h2 class="uppercase text-3xl font-bold text-primary-color">
+              Chicken Crisper® Combos
+            </h2>
+
+            <!-- Breadcrumb section start  -->
+            <nav class="flex justify-center items-center Breadcrumb my-3">
+              <ol
+                class="inline-flex justify-center items-center space-x-1 md:space-x-2 rtl:space-x-reverse"
+              >
+                <li class="inline-flex items-center">
+                  <a
+                    href="#"
+                    class="inline-flex items-center text-sm font-medium text-gray-700 duration-200 hover:text-primary-color dark:text-gray-400 dark:hover:text-white"
+                  >
+                    <i class="fa-solid fa-house mr-1"></i>
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <div class="flex items-center">
+                    <i class="fa-solid fa-angle-right"></i>
+                    <span
+                      class="ms-1 text-sm font-medium text-gray-500 md:ms-2 dark:text-gray-400"
+                      >Chicken Crisper® Combos</span
+                    >
+                  </div>
+                </li>
+              </ol>
+            </nav>
+            <!-- Breadcrumb section end  -->
+
+            <h3 class="text-lg font-semibold">
+              Find everything from our Big Mouth Burgers®, our always sizzling,
+              Full-on Fajitas and our famous Chicken Crispers®
+            </h3>
+          </div>
+          <div class="flex justify-end my-8">
+            <div
+              class="border flex gap-2 justify-between items-center text-lg font-semibold rounded cursor-pointer px-4 py-2"
+            >
+              <span class="capitalize">Menu</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="list grid gap-6 sm:grid-cols-2 md:grid-cols-3"></div>
+      </div>
+    </div>
     <!-- food-item section end  -->
 
     <!-- footer section start -->
@@ -134,18 +219,12 @@
         <span class="text-sm text-white"
           >©
           <span id="currentYear"></span>
-          <a href="index.html" class="hover:underline">Chili's™</a>. All Rights
+          <a href="#" class="hover:underline">Chili's™</a>. All Rights
           Reserved.
         </span>
       </div>
     </footer>
     <!-- footer section end -->
-
-    <!-- fontawesome script file  -->
-    <script
-      src="https://kit.fontawesome.com/414948429d.js"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- custom script file  -->
     <script src="index.js"></script>

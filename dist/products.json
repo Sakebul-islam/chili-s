@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "status": "new",
+    "name": "Sausage, Egg & Cheese Croissan’wich",
+    "image": "food_items/food_1.png",
+    "description": "Minus eaque omnis aut autem deleniti est. Dolores earum sequi qui libero et fugit.",
+    "price": 5.6
+  },
+  {
+    "id": 2,
+    "name": "Spicy Chicken Sandwich",
+    "image": "food_items/food_2.png",
+    "description": "Neque ut vel suscipit architecto commodi. Quia eligendi earum aspernatur quia. Temporibus qui fugit rerum corrupti placeat laudantium.",
+    "price": 12.46
+  },
+  {
+    "id": 3,
+    "status": "new",
+    "name": "Subway Melt",
+    "image": "food_items/food_3.png",
+    "description": "Quis quam ut commodi. Perspiciatis est illum consequatur. Voluptates illum ea et magni culpa voluptas error.",
+    "price": 6.9
+  },
+  {
+    "id": 4,
+    "name": "Crunchwrap Supreme",
+    "image": "food_items/food_4.png",
+    "description": "Ut quidem est eos placeat. Tempore voluptate autem aspernatur hic sit omnis qui. Temporibus quae autem alias dignissimos.",
+    "price": 5.4
+  },
+  {
+    "id": 5,
+    "status": "new",
+    "name": "Beef ‘n Cheddar",
+    "image": "food_items/food_5.png",
+    "description": "Ea similique velit hic rerum officiis. Exercitationem quidem dolores nulla assumenda. Autem ipsam ab qui ullam et ut est. Dolor ex aut optio ad. Et rem aliquam ut facilis illum.",
+    "price": 5.99
+  },
+  {
+    "id": 6,
+    "status": "new",
+    "name": "Double-Double",
+    "image": "food_items/food_6.png",
+    "description": "Velit voluptas consectetur omnis sed nihil aut. A quo officia et alias omnis magni vel. Dolorum temporibus iure perspiciatis quo qui ipsam iste laudantium.",
+    "price": 9.35
+  },
+  {
+    "id": 7,
+    "name": "Fish Fillet",
+    "image": "food_items/food_7.png",
+    "description": "Sint aliquam sed nobis ut. Quia incidunt delectus laudantium dolores ducimus aliquid ut. Sit ratione officiis nostrum veniam iure. Ea alias nulla qui delectus ducimus.",
+    "price": 5.9
+  },
+  {
+    "id": 8,
+    "status": "new",
+    "name": "Piece Chicken McNuggets",
+    "image": "food_items/food_8.png",
+    "description": "Id dolorem illo assumenda. Voluptas veniam quo corrupti et ipsam nesciunt ad voluptas. Similique ullam consectetur quaerat in nostrum labore iusto.",
+    "price": 9.08
+  },
+  {
+    "id": 6,
+    "name": "Chili Cheese Dog",
+    "image": "food_items/food_9.png",
+    "description": "Autem harum saepe et. Vel similique minima iste recusandae amet. Voluptatem quisquam velit eum quisquam maiores.",
+    "price": 4.09
+  }
+]
