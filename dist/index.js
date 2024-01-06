@@ -1,28 +1,23 @@
 'use strict';
 
-const theme_switcher = document.querySelector('.theme-switcher');
-
 const cart = document.querySelector('.cart');
+const cart_sidebar = document.querySelector('.cart-sidebar');
+const close_sidebar = document.querySelector('.close-sidebar');
+document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-let isDarkTheme = false;
+// card-sidebar open and hide function
+const handleSidebar = () => {
+  if (cart_sidebar.classList.contains('-right-72')) {
+    // If cart_sidebar has -right-72, remove it and add right-0
+    cart_sidebar.classList.remove('-right-72');
+    cart_sidebar.classList.add('right-0');
+  } else if (cart_sidebar.classList.contains('right-0')) {
+    // If cart_sidebar has right-0, remove it and add -right-72
+    cart_sidebar.classList.remove('right-0');
+    cart_sidebar.classList.add('-right-72');
+  }
+};
 
-// Function to toggle between light and dark themes
-function toggleTheme() {
-  const body = document.body;
-  const lightThemeIcon = document.getElementById('lightTheme');
-  const darkThemeIcon = document.getElementById('darkTheme');
-
-  // Toggle theme class on the body
-  body.classList.toggle('dark-theme', isDarkTheme);
-  body.classList.toggle('light-theme', !isDarkTheme);
-
-  // Toggle icons visibility
-  lightThemeIcon.classList.add(isDarkTheme ? 'block' : 'hidden');
-  darkThemeIcon.classList.add(isDarkTheme ? 'hidden' : 'block');
-
-  // Update theme state
-  isDarkTheme = !isDarkTheme;
-}
-
-// Add click event listener to the theme switcher
-theme_switcher.addEventListener('click', toggleTheme);
+// card-sidebar open and hide
+cart.addEventListener('click', handleSidebar);
+close_sidebar.addEventListener('click', handleSidebar);

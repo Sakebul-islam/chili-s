@@ -16,7 +16,9 @@
       rel="stylesheet"
     />
   </head>
-  <body class="font-dosis min-h-screen select-none">
+  <body
+    class="overflow-x--hidden font-dosis flex flex-col min-h-screen select-none"
+  >
     <!-- header section start  -->
     <header
       class="relative after:absolute after:top-0 after:left-0 after:w-full after:h-[5px] after:bg-red-500 after:shadow-lg bg-[#f9f5f1] px-2 py-4 pt-[21px]"
@@ -90,28 +92,53 @@
             >
               order now
             </button>
-            <div class="theme-switcher">
-              <i
-                id="lightTheme"
-                class="fa-regular fa-sun font-bold text-lg rounded-lg"
-              ></i>
-              <i
-                id="darkTheme"
-                class="fa-regular fa-moon font-bold text-lg rounded-lg"
-              ></i>
-            </div>
           </div>
         </div>
       </div>
     </header>
     <!-- header section end  -->
 
-    <!-- food-item section start  -->
+    <!-- cart section end  -->
+    <div
+      class="cart-sidebar duration-300 flex flex-col items-stretch bg-primary-color w-72 min-h-screen fixed top-0 -right-72"
+    >
+      <div
+        class="flex justify-between items-center p-2 text-lg font-bold bg-white text-primary-color"
+      >
+        <div class="flex gap-2 justify-between items-center">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <p class="capitalize text-lg tracking-widest">
+            <span class="tracking-normal">10</span>&nbsp;item
+          </p>
+        </div>
+        <i
+          class="close-sidebar fa-solid fa-xmark p-2 border border-primary-color cursor-pointer"
+        ></i>
+      </div>
+      <ul class="listCart grow"></ul>
+      <div class="checkOut bg-white">
+        <p class="text-center text-lg font-semibold py-2">
+          Place Order :&nbsp;<span class="total">0</span>
+        </p>
+      </div>
+    </div>
+    <!-- cart section end  -->
 
+    <!-- food-item section start  -->
+    <div class="grow"></div>
     <!-- food-item section end  -->
 
     <!-- footer section start -->
-
+    <footer class="bg-gray-800 shadow">
+      <div class="w-full mx-auto p-4 text-center">
+        <span class="text-sm text-white"
+          >©
+          <span id="currentYear"></span>
+          <a href="index.html" class="hover:underline">Chili's™</a>. All Rights
+          Reserved.
+        </span>
+      </div>
+    </footer>
     <!-- footer section end -->
 
     <!-- fontawesome script file  -->
