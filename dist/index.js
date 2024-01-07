@@ -95,7 +95,11 @@ const addToCart = (key) => {
 };
 
 const deleteItemFromCart = (key) => {
-  delete listCarts[key];
+  listCarts = listCarts.filter((item, i) => {
+    console.log(key, item.id, i);
+    return item.id !== key;
+  });
+
   document.querySelectorAll('.add-to-cart-button').forEach((button, key) => {
     if (listCarts[key] !== undefined) {
       // If the item already exists, disable the button
@@ -120,7 +124,9 @@ const reloadCart = () => {
     if (value != null) {
       const itemHTML = `
         <li class="border-2 flex gap-2 p-1 justify-start items-center relative rounded-md">
-        <span class="inline-block absolute -top-2 -right-2 bg-white px-2 py-1 rounded-sm text-xs uppercase tracking-widest z-50 cursor-pointer delete" onclick="deleteItemFromCart(${key})">
+        <span class="inline-block absolute -top-2 -right-2 bg-white px-2 py-1 rounded-sm text-xs uppercase tracking-widest z-50 cursor-pointer delete" onclick="deleteItemFromCart(${
+          value.id
+        })">
         <i class="fa-solid fa-trash text-primary-color"></i>
         </span>
           <figure class='grid place-content-center min-w-16 max-w-16 h-full bg-white'>
@@ -160,13 +166,16 @@ const reloadCart = () => {
     }
   });
 
+  total.innerText = totalPrice.toFixed(2).toLocaleString();
+  // quantity.innerText = count;
+  updateQty();
+};
+
+const updateQty = () => {
   // Update quantity
   cartQuantityElements.forEach((element) => {
     element.innerText = listCarts.length;
   });
-
-  total.innerText = totalPrice.toFixed(2).toLocaleString();
-  // quantity.innerText = count;
 };
 const changeQuantity = (key, quantity) => {
   if (quantity == 0) {
